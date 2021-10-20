@@ -9,12 +9,14 @@ function toggleTheme() {
   let mainCard = document.querySelectorAll(".total_followers");
   let subCard = document.querySelectorAll(".pages");
   let headingText = document.querySelectorAll(".bold_text");
-  let paragraphText = document.querySelectorAll(".normal_text");
+    let paragraphText = document.querySelectorAll(".normal_text");
+    let themeText = document.getElementById("mode_text");
 
     if (toggler.checked == true) {
       
     document.body.style.backgroundColor = "hsl(230, 17%, 14%)";
-    header.style.backgroundColor = "hsl(232, 19%, 15%)";
+        header.style.backgroundColor = "hsl(232, 19%, 15%)";
+        themeText.innerHTML = 'Light Mode';
 
     for (let i = 0; i < mainCard.length; i++) {
       mainCard[i].style.backgroundColor = "hsl(228, 28%, 20%)";
@@ -34,7 +36,8 @@ function toggleTheme() {
     } else {
         
     document.body.style.backgroundColor = "hsl(0, 0%, 100%)";
-    header.style.backgroundColor = "hsl(225, 100%, 98%)";
+        header.style.backgroundColor = "hsl(225, 100%, 98%)";
+        themeText.innerHTML = "Dark Mode";
 
     for (let i = 0; i < mainCard.length; i++) {
       mainCard[i].style.backgroundColor = "hsl(227, 47%, 96%)";
